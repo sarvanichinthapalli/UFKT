@@ -101,8 +101,8 @@ else:
 
 pretrained_model = models.resnet50(pretrained=True).cuda()
 
-state = {'model': pretrained_model.state_dict()}
-th.save(state,'saved_model.pth')
+#state = {'model': pretrained_model.state_dict()}
+#th.save(state,'saved_model.pth')
 checkpoint = th.load('saved_model.pth') #
 model.load_state_dict(checkpoint['model'])
 #checkpoint = th.load('saved_model.pth')
